@@ -1,0 +1,16 @@
+<resources>
+    <!-- Main Activity -->
+    <string name="app_name">In And Out</string>
+    <string name="place_an_order">Place an Order</string>
+    <string name="double_double_price">Double Double $3.60</string>
+    <string name="cheeseburger_price">Cheeseburger $2.15</string>
+    <string name="french_fries_price">French Fries $1.65</string>
+    <string name="shake_price">Shakes $2.20</string>
+    <string name="drink_prompt">Fountain Drinks (pick size):</string>
+    <string name="small_price">Small $1.45</string>
+    <string name="medium_price">Medium $1.55</string>
+    <string name="large_price">Large $1.75</string>
+    <string name="place_order_button">Place Order</string>
+    <!-- Summary Activity -->
+    <string name="order_total">Order Total:</string>
+</resources>
