@@ -39,6 +39,7 @@ public class OrderActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
 
+        // Wiring up edit text views
         doubleDoubleEditTextView = findViewById(R.id.doubleDoubleEditTextView);
         cheeseburgerEditTextView = findViewById(R.id.cheeseburgerEditTextView);
         frenchFriesEditTextView = findViewById(R.id.frenchFriesEditTextView);
@@ -50,6 +51,7 @@ public class OrderActivity extends AppCompatActivity
 
     public void goToSummary(View v)
     {
+        // Creating variables for intent from text views
         int doubleDoubleAmount;
         int cheeseburgerAmount;
         int frenchFriesAmount;
@@ -57,8 +59,6 @@ public class OrderActivity extends AppCompatActivity
         int smallAmount;
         int mediumAmount;
         int largeAmount;
-
-        // Creating variables for intent from text views
 
         try // try to get int value from edit text view
         {
@@ -130,6 +130,7 @@ public class OrderActivity extends AppCompatActivity
         intent.putExtra("LargeAmount", largeAmount);
 
 
+        // Go to SummaryActivity
         startActivity(intent);
     }
 }

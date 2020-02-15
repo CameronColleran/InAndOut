@@ -24,12 +24,17 @@ public class SummaryActivity extends AppCompatActivity
     /**
      * Instance variables
      */
+    /** Order object to do calculations */
     Order order;
+    /** NumberFormatter for Text View's outputs */
     private NumberFormat currency = NumberFormat.getCurrencyInstance(Locale.getDefault());
-
+    /** Total Amount Text View */
     private TextView totalAmountTextView;
+    /** Items Amount Text View */
     private TextView itemsAmountTextView;
+    /** Subtotal Amount Text View */
     private TextView subtotalAmountTextView;
+    /** Tax Amount Text View */
     private TextView taxAmountTextView;
 
     @Override
@@ -84,6 +89,7 @@ public class SummaryActivity extends AppCompatActivity
 
     public void returnToMain(View v)
     {
+        // Finish intent and return to OrderActivity
         finish();
     }
 
