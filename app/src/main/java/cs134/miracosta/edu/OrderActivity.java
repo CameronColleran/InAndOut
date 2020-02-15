@@ -1,3 +1,9 @@
+/**
+ * OrderActivity.java: Class which feeds data from Text Views to SummaryActivity.java (Controller)
+ *
+ * @author Cameron Colleran
+ * @version 1.0
+ */
 package cs134.miracosta.edu;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,21 +13,31 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity
+public class OrderActivity extends AppCompatActivity
 {
+    /**
+     * Instance variables
+     */
+    /** Double-Double Burger Edit Text View */
     private EditText doubleDoubleEditTextView;
+    /** Cheeseburger Edit Text View */
     private EditText cheeseburgerEditTextView;
+    /** French Fries Edit Text View */
     private EditText frenchFriesEditTextView;
+    /** Shakes Edit Text View */
     private EditText shakesEditTextView;
+    /** Small Drinks Edit Text View */
     private EditText smallEditTextView;
+    /** Medium Drinks Edit Text View */
     private EditText mediumEditTextView;
+    /** Large Drinks Edit Text View */
     private EditText largeEditTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_order);
 
         doubleDoubleEditTextView = findViewById(R.id.doubleDoubleEditTextView);
         cheeseburgerEditTextView = findViewById(R.id.cheeseburgerEditTextView);

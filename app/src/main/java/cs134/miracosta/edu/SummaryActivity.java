@@ -1,3 +1,10 @@
+/**
+ * SummaryActivity.java: Class which receives incoming data from OrderActivity.java and performs
+ * calculations, then updates corresponding Text Views
+ *
+ * @author Cameron Colleran
+ * @version 1.0
+ */
 package cs134.miracosta.edu;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -46,7 +53,6 @@ public class SummaryActivity extends AppCompatActivity
 
         // Instantiating data with data from intent
         doubleDoubleAmount = intent.getIntExtra("DoubleDoubleAmount",0);
-        System.out.println("DOUBLES " + doubleDoubleAmount);
         cheeseburgerAmount = intent.getIntExtra("CheeseburgerAmount",0);
         frenchFriesAmount = intent.getIntExtra("FrenchFriesAmount",0);
         shakesAmount = intent.getIntExtra("ShakesAmount",0);
