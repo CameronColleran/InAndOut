@@ -49,6 +49,10 @@ public class OrderActivity extends AppCompatActivity
         largeEditTextView = findViewById(R.id.largeEditTextView);
     }
 
+    /**
+     * On click for Place Order Button
+     * @param v
+     */
     public void goToSummary(View v)
     {
         // Creating variables for intent from text views

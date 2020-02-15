@@ -87,6 +87,10 @@ public class SummaryActivity extends AppCompatActivity
         taxAmountTextView.setText(currency.format(order.calculateTax()));
     }
 
+    /**
+     * On click for Start New Order Button
+     * @param v
+     */
     public void returnToMain(View v)
     {
         // Finish intent and return to OrderActivity
