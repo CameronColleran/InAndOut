@@ -13,6 +13,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import cs134.miracosta.edu.Model.Order;
+
 public class OrderActivity extends AppCompatActivity
 {
     /**
@@ -121,18 +123,28 @@ public class OrderActivity extends AppCompatActivity
             largeAmount = 0;
         }
 
+        Order order = new Order();
+
+        order.setmDoubleDoubles(doubleDoubleAmount);
+        order.setmCheeseburgers(cheeseburgerAmount);
+        order.setmFrenchFries(frenchFriesAmount);
+        order.setmShakes(shakesAmount);
+        order.setmSmallDrinks(smallAmount);
+        order.setmMediumDrinks(mediumAmount);
+        order.setmLargeDrinks(largeAmount);
+
+        double total = order.calculateTotal();
+        double subtotal = order.calculateSubtotal();
+        int numOfItems = order.calculateNumOfItems();
+        double tax = order.calculateTax();
 
         Intent intent = new Intent(this,SummaryActivity.class);
 
         // Populating intent
-        intent.putExtra("DoubleDoubleAmount", doubleDoubleAmount);
-        intent.putExtra("CheeseburgerAmount", cheeseburgerAmount);
-        intent.putExtra("FrenchFriesAmount", frenchFriesAmount);
-        intent.putExtra("ShakesAmount", shakesAmount);
-        intent.putExtra("SmallAmount", smallAmount);
-        intent.putExtra("MediumAmount", mediumAmount);
-        intent.putExtra("LargeAmount", largeAmount);
-
+        intent.putExtra("Total", total);
+        intent.putExtra("Subtotal", subtotal);
+        intent.putExtra("NumOfItems", numOfItems);
+        intent.putExtra("Tax", tax);
 
         // Go to SummaryActivity
         startActivity(intent);

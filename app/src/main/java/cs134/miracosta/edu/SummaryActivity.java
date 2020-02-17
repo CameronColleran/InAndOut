@@ -17,15 +17,11 @@ import android.widget.TextView;
 import java.text.NumberFormat;
 import java.util.Locale;
 
-import cs134.miracosta.edu.Model.Order;
-
 public class SummaryActivity extends AppCompatActivity
 {
     /**
      * Instance variables
      */
-    /** Order object to do calculations */
-    Order order;
     /** NumberFormatter for Text View's outputs */
     private NumberFormat currency = NumberFormat.getCurrencyInstance(Locale.getDefault());
     /** Total Amount Text View */
@@ -45,34 +41,19 @@ public class SummaryActivity extends AppCompatActivity
 
 
         // Initializing data variables
-        int doubleDoubleAmount;
-        int cheeseburgerAmount;
-        int frenchFriesAmount;
-        int shakesAmount;
-        int smallAmount;
-        int mediumAmount;
-        int largeAmount;
+        double total;
+        double subtotal;
+        int numOfItems;
+        double tax;
+
 
         Intent intent = getIntent();
-        order = new Order();
 
         // Instantiating data with data from intent
-        doubleDoubleAmount = intent.getIntExtra("DoubleDoubleAmount",0);
-        cheeseburgerAmount = intent.getIntExtra("CheeseburgerAmount",0);
-        frenchFriesAmount = intent.getIntExtra("FrenchFriesAmount",0);
-        shakesAmount = intent.getIntExtra("ShakesAmount",0);
-        smallAmount = intent.getIntExtra("SmallAmount",0);
-        mediumAmount = intent.getIntExtra("MediumAmount",0);
-        largeAmount = intent.getIntExtra("LargeAmount",0);
-
-        // Populating Order (model) object with data
-        order.setmDoubleDoubles(doubleDoubleAmount);
-        order.setmCheeseburgers(cheeseburgerAmount);
-        order.setmFrenchFries(frenchFriesAmount);
-        order.setmShakes(shakesAmount);
-        order.setmSmallDrinks(smallAmount);
-        order.setmMediumDrinks(mediumAmount);
-        order.setmLargeDrinks(largeAmount);
+        total = intent.getDoubleExtra("Total",0.0);
+        subtotal = intent.getDoubleExtra("Subtotal",0.0);
+        numOfItems = intent.getIntExtra("NumOfItems",0);
+        tax = intent.getDoubleExtra("Tax",0.0);
 
         // Wiring up text views
         totalAmountTextView = findViewById(R.id.totalAmountTextView);
@@ -81,10 +62,10 @@ public class SummaryActivity extends AppCompatActivity
         taxAmountTextView = findViewById(R.id.taxAmountTextView);
 
         // Setting Text Views
-        totalAmountTextView.setText(currency.format(order.calculateTotal()));
-        itemsAmountTextView.setText(Integer.toString(order.calculateNumOfItems()));
-        subtotalAmountTextView.setText(currency.format(order.calculateSubtotal()));
-        taxAmountTextView.setText(currency.format(order.calculateTax()));
+        totalAmountTextView.setText(currency.format(total));
+        itemsAmountTextView.setText(Integer.toString(numOfItems));
+        subtotalAmountTextView.setText(currency.format(subtotal));
+        taxAmountTextView.setText(currency.format(tax));
     }
 
     /**
