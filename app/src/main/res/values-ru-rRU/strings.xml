@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">In And Out</string>
+    <string name="cheeseburger_price">Чизбургер $ 2,15</string>
+    <string name="double_double_price">"Двухместный Двухместный $ 3,60 "</string>
+    <string name="drink_prompt">"Напитки \"Фонтан\" (размер подбора): "</string>
+    <string name="french_fries_price">"Картофель фри $ 1,65 "</string>
+    <string name="items_ordered">"Заказанные товары: "</string>
+    <string name="large_price">"Большой $ 1,75 "</string>
+    <string name="medium_price">"Средний $ 1,55 "</string>
+    <string name="order_total">"Весь заказ: "</string>
+    <string name="place_an_order">"Разместить заказ "</string>
+    <string name="place_order_button">"Разместить заказ "</string>
+    <string name="shake_price">"Встряхивает 2,20 $ "</string>
+    <string name="small_price">"Малый 1,45 $ "</string>
+    <string name="start_new_order_button">"Начать новый заказ "</string>
+    <string name="subtotal">"Промежуточный итог: "</string>
+    <string name="tax">"Налог (8%): "</string>
+</resources>
