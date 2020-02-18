@@ -57,7 +57,7 @@ public class OrderActivity extends AppCompatActivity
      */
     public void goToSummary(View v)
     {
-        // Creating variables for intent from text views
+        // Creating variables for order from text views
         int doubleDoubleAmount;
         int cheeseburgerAmount;
         int frenchFriesAmount;
@@ -123,8 +123,10 @@ public class OrderActivity extends AppCompatActivity
             largeAmount = 0;
         }
 
+        // Creating order object
         Order order = new Order();
 
+        // Setting order variables
         order.setmDoubleDoubles(doubleDoubleAmount);
         order.setmCheeseburgers(cheeseburgerAmount);
         order.setmFrenchFries(frenchFriesAmount);
@@ -133,6 +135,7 @@ public class OrderActivity extends AppCompatActivity
         order.setmMediumDrinks(mediumAmount);
         order.setmLargeDrinks(largeAmount);
 
+        // Creating intent data
         double total = order.calculateTotal();
         double subtotal = order.calculateSubtotal();
         int numOfItems = order.calculateNumOfItems();
